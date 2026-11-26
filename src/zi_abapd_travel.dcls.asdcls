@@ -1,0 +1,9 @@
+@EndUserText.label: 'Access Control for Travel'
+@MappingRole: true
+define role ZI_ABAPD_TRAVEL {
+    grant
+        select
+            on
+                ZI_ABAPD_TRAVEL
+                    where Status = 'O';
+}

@@ -1,0 +1,5 @@
+CLASS zbp_r_abapd_travel DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zr_abapd_travel.
+ENDCLASS.
+
+CLASS zbp_r_abapd_travel IMPLEMENTATION.
+ENDCLASS.

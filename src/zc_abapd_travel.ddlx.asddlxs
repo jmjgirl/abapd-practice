@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+@UI : { headerInfo : { typeName : 'Travel',
+                       typeNamePlural : 'Travels',
+                       title          : { type: #STANDARD, value: 'Description' } } }
+annotate entity ZC_ABAPD_TRAVEL with 
+{ 
+    @UI.facet: [ { id       : 'Travel',
+                   purpose  : #STANDARD,
+                   type     : #IDENTIFICATION_REFERENCE,
+                   label    : 'Travel',
+                   position : 10 } ]
+    @UI : { lineItem       : [ { position : 10 } ],
+            identification : [ { position : 10 } ],
+            selectionField : [ { position : 10 } ] }
+    TravelId;
+    
+    @UI : { lineItem       : [ { position : 20 } ],
+            identification : [ { position : 20 } ] }
+    Description;
+    
+    @UI : { lineItem       : [ { position : 30 } ],
+            identification : [ { position : 30 } ],
+            selectionField : [ { position : 20 } ] }
+    AgencyId;
+    
+    @UI : { lineItem       : [ { position : 40 } ],
+            identification : [ { position : 40 } ] }
+    TotalPrice;
+    
+    @UI : { lineItem       : [ { position : 50 },
+                               { type : #FOR_ACTION, dataAction: 'acceptTravel', label : 'Accept Travel'} ],
+            identification : [ { position : 50 },
+                               { type : #FOR_ACTION, dataAction: 'acceptTravel', label : 'Accept Travel'} ],
+            selectionField : [ { position : 30 } ] }
+    Status;
+    
+    @UI : { lineItem       : [ { position : 60 } ]}
+    StatusText;
+    
+    @UI.hidden : true
+    LocalLastChangedAt;
+    
+    @UI.hidden : true
+    lastchangedat;
+}
